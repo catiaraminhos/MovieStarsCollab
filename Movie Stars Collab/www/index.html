@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<!--Home Page of Movie Stars Collab (with search form)-->
+<html ng-app="movie-collab">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="format-detection" content="telephone=no" />
+        <meta name="msapplication-tap-highlight" content="no" />
+        <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+        <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="css/autocomplete.css">
+        <link rel="stylesheet" type="text/css" href="css/index.css" />
+
+        <!---<script type="text/javascript" src="cordova.js"></script>-->
+        <script type="text/javascript" src="js/jquery-2.1.4.js"></script>
+        <script type="text/javascript" src="js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.12/angular.min.js"></script>
+        <script type="text/javascript" src="js/autocomplete.js"></script>
+        <script type="text/javascript" src="js/app.js"></script>
+
+        <title>Movie Stars Collab</title>
+    </head>
+    <body>
+      <div class="app">
+      <navbar-blue></navbar-blue>
+
+      <div class="description"></div>
+
+      <div class="formSearch">
+        <form>
+          <div class="form-group">
+            <div ng-controller="InputSearchController">
+              <autocomplete ng-model="typed" data="actors"
+                on-type="updateActors" attr-placeholder="1st actor">
+              </autocomplete>
+            </div>
+          </div>
+        </form>
+      </div>
+    </body>
+</html>
