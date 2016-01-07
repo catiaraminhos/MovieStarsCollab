@@ -31,7 +31,14 @@
           <div class="form-group">
             <div ng-controller="InputSearchController">
               <autocomplete ng-model="typed" data="actors"
-                on-type="updateActors" attr-placeholder="1st actor">
+                on-type="updateActors" on-select="selectActor" attr-placeholder="1st actor" attr-class="search_ac">
+              </autocomplete>
+            </div>
+          </div>
+          <div class="form-group">
+            <div ng-controller="InputSearchController">
+              <autocomplete ng-model="typed" data="actors"
+                on-type="updateActors" on-select="selectActor" attr-placeholder="2nd actor" attr-class="search_ac">
               </autocomplete>
             </div>
           </div>
