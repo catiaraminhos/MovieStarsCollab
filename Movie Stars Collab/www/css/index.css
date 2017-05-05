@@ -125,3 +125,12 @@ h1 {
   margin-left: 5%;
   margin-right: 5%;
 }
+
+.search_ac ul {
+  background-color: #fff;
+  border-top: 1px solid #888;
+}
+
+.search_ac li.active {
+  background-color: #428bca;
+}
